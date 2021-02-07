@@ -1,0 +1,24 @@
+{% extends 'layout.njk' %}
+
+{% block head %}
+  <title>recipes</title>
+  <link rel="stylesheet" href="/recipes.css">
+{% endblock %}
+
+{% block content %}
+  <div class="card">
+    <div class="card-image">
+      <img src="{{items.image}}" alt="">
+    </div>
+    <h1 class="food-name">{{items.title}}</h1>
+    <p class="chef-name">{{items.author}}</p>
+  </div>
+
+  <div class="ingredients">
+    <ul>Ingredientes</ul>
+    {% for item in items.ingredients %}
+      <li>{{item}}</li>
+    {% endfor %}
+  </div>
+
+{% endblock %}
