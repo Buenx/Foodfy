@@ -14,8 +14,10 @@
     <header>
       <div class="links-header">
         <img src="/assets/logo.png" onclick="location.href = '/';" id="logo" alt="">
-        <a href="/sobre" id="sobre">Sobre</a>
-        <a href="/receitas" id="Receitas">Receitas</a>
+        {% block header %}
+          <a href="/sobre" id="sobre">Sobre</a>
+          <a href="/receitas" id="Receitas">Receitas</a>
+        {% endblock %}
       </div>
     </header>
 
@@ -26,7 +28,6 @@
         <p>Todos direitos reservados, receitas Foodfy</p>
       </div>
     </footer>
-
   </body>
 
 </html>

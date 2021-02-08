@@ -1,19 +1,24 @@
 {% extends 'layout.njk' %}
 
+{% block header %}
+  <a href="/sobre" id="sobre">Sobre</a>
+  <a style="font-weight: bold;" href="/receitas" id="Receitas">Receitas</a>
+{% endblock %}
+
 {% block content %}
-
-  <section style="margin-top: 40px;" class="cards">
-
-    {% for recipe in recipes %}
-      <div class="card">
-        <div class="card-image">
-          <img src="{{recipe.image}}" alt="">
+  <main>
+    <section class="cards">
+      {% for recipe in recipes %}
+        <div class="card">
+          <div class="card-image">
+            <img src="{{recipe.image}}" alt="">
+          </div>
+          <h1 class="food-name">{{recipe.title}}</h1>
+          <p class="chef-name">{{recipe.author}}</p>
         </div>
-        <h1 class="food-name">{{recipe.title}}</h1>
-        <p class="chef-name">{{recipe.author}}</p>
-      </div>
-    {% endfor %}
+      {% endfor %}
+    </section>
+  </main>
+  <script src="scripts.js"></script>
 
-    <script src="scripts.js"></script>
-
-  {% endblock %}
+{% endblock %}

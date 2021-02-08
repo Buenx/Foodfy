@@ -6,6 +6,7 @@
 {% endblock %}
 
 {% block content %}
+
   <div class="card">
     <div class="card-image">
       <img src="{{items.image}}" alt="">
@@ -14,11 +15,43 @@
     <p class="chef-name">{{items.author}}</p>
   </div>
 
-  <div class="ingredients">
-    <ul>Ingredientes</ul>
-    {% for item in items.ingredients %}
-      <li>{{item}}</li>
-    {% endfor %}
-  </div>
+  <section class="recipes-info">
+
+    <div class="title-text">
+      <h1>ingredientes</h1>
+      <p class="hidden-button">Esconder</p>
+    </div>
+
+    <div class="text" id="1">
+      {% for item in items.ingredients %}
+        <li>{{item}}</li>
+      {% endfor %}
+    </div>
+
+    <div class="title-text">
+      <h1>Modo de preparo</h1>
+      <p class="hidden-button">Esconder</p>
+    </div>
+
+    <div class="text" id="2">
+      {% for item in items.preparation %}
+        <li>{{item}}</li>
+      {% endfor %}
+    </div>
+
+    <div class="title-text">
+      <h1>Informações adicionais</h1>
+      <p class="hidden-button">Esconder</p>
+    </div>
+
+    <div class="text" id="3">
+      <p>{{items.information}}</p>
+    </div>
+
+  </section>
+
+  <script src="/hide.js"></script>
+
+  <div class="push"></div>
 
 {% endblock %}
