@@ -1,4 +1,4 @@
-# 🚀 Sobre o desafio
+# 🚀 Sobre o desafio.
 
 ## Nesse desafio você vai construir um site completo para uma empresa de receitas chamada Foodfy.
 
