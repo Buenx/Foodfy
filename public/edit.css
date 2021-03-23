@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,300&display=swap');
+* {
+  margin: 0;
+  border: 0;
+  font-family: Roboto;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  overflow-y: overlay;
+}
+
+header {
+  width: 100vw;
+  height: 80px;
+  background-color: #111111;
+}
+
+.links-header {
+  width: 940px;
+  margin: 0 auto;
+}
+
+.links-header img {
+  margin-top: 25px;
+  cursor: pointer;
+}
+
+.title {
+  max-width: 940px;
+  margin: 0 auto;
+  margin-top: 55px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title div,
+.title button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+#save-button {
+  width: 136px;
+  height: 37px;
+
+  background-color: #6558c3;
+}
+
+#delete-button {
+  width: 92px;
+  height: 37px;
+  margin-left: 49%;
+  background-color: #dc4747;
+}
+
+.title p {
+  font-size: 24px;
+  color: #111111;
+  font-weight: bold;
+}
+
+.card {
+  max-width: 940px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.item div:first-child {
+  font-weight: bold;
+  font-size: 16px;
+  color: #111111;
+  margin-top: 10px;
+}
+
+.item div input {
+  margin-top: 10px;
+}
+
+.item div input,
+.item:last-child div textarea {
+  border: 1px solid #dddddd;
+  background: #ffffff;
+  width: 100%;
+  height: 49px;
+  border-radius: 4px;
+  outline: none;
+
+  font-size: 16px;
+  color: #111111;
+  font-weight: 400;
+}
+
+.item div input[type='text'] {
+  padding: 12px 20px;
+}
+
+.item button {
+  margin-top: 15px;
+  background: none;
+
+  color: #6558c3;
+  font-weight: bold;
+  font-size: 16px;
+
+  padding: 0;
+}
+
+.item {
+  margin-bottom: 26px;
+}
+
+.item:last-child div textarea {
+  height: 250px;
+  width: 100%;
+  padding: 12px;
+  line-height: 24px;
+  margin-top: 10px;
+}
+.item:last-child {
+  margin-bottom: 100px;
+}

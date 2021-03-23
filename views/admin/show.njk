@@ -1,0 +1,70 @@
+{% extends 'layout.njk' %}
+
+{% block head %}
+  <title>recipes</title>
+  <link rel="stylesheet" href="/show.css">
+{% endblock %}
+
+
+{% block header %}
+  <img src="/assets/logo2.png" onclick="location.href = '/';" id="logo" alt="">
+{% endblock %}
+
+{% block content %}
+
+<div class="title">
+  <p>Gerenciar receitas</p>
+  <div class="edit">Editar receita</div>
+</div>
+
+  <div class="card">
+    <div class="card-image">
+      <img src="{{items.image}}" alt="">
+    </div>
+    <h1 class="food-name">{{items.title}}</h1>
+    <p class="chef-name">{{items.author}}</p>
+  </div>
+
+  <section class="recipes-info">
+
+    <div class="title-text">
+      <h1>ingredientes</h1>
+      <p class="hidden-button">Esconder</p>
+    </div>
+
+    <div class="text" id="1">
+      {% for item in items.ingredients %}
+        <li>{{item}}</li>
+      {% endfor %}
+    </div>
+
+    <div class="title-text">
+      <h1>Modo de preparo</h1>
+      <p class="hidden-button">Esconder</p>
+    </div>
+
+    <div class="text" id="2">
+      {% for item in items.preparation %}
+        <li>{{item}}</li>
+      {% endfor %}
+    </div>
+
+    <div class="title-text">
+      <h1>Informações adicionais</h1>
+      <p class="hidden-button">Esconder</p>
+    </div>
+
+    <div class="text" id="3">
+      <p>{{items.information}}</p>
+    </div>
+
+  </section>
+
+  <script src="/hide.js"></script>
+
+  <script src="/scriptsAdmin.js"></script>
+
+  {% block footer %}
+  {% endblock %}
+
+{% endblock %}

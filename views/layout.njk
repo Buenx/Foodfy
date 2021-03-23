@@ -13,8 +13,8 @@
   <body>
     <header>
       <div class="links-header">
-        <img src="/assets/logo.png" onclick="location.href = '/';" id="logo" alt="">
         {% block header %}
+        <img src="/assets/logo.png" onclick="location.href = '/';" id="logo" alt="">
           <a href="/sobre" id="sobre">Sobre</a>
           <a href="/receitas" id="Receitas">Receitas</a>
         {% endblock %}
@@ -23,11 +23,13 @@
 
     {% block content %}{% endblock %}
 
-    <footer>
-      <div class="footer-text">
-        <p>Todos direitos reservados, receitas Foodfy</p>
-      </div>
-    </footer>
-  </body>
+    {% block footer %}
+      <footer>
+        <div class="footer-text">
+          <p>Todos direitos reservados, receitas Foodfy</p>
+        </div>
+      </footer>
+    {% endblock %}
 
+  </body>
 </html>

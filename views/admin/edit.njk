@@ -1,0 +1,56 @@
+{% extends 'layout.njk' %}
+
+{% block head %}
+  <title>recipes</title>
+  <link rel="stylesheet" href="/edit.css">
+{% endblock %}
+
+
+{% block header %}
+  <img src="/assets/logo2.png" onclick="location.href = '/';" id="logo" alt="">
+{% endblock %}
+
+{% block content %}
+
+
+  <div class="title">
+    <p>Editando receitas</p>
+    <div id="delete-button" class="edit">Deletar </div>
+    <div id="save-button" class="edit">Salvar receita</div>
+  </div>
+
+  <div class="card">
+
+    <div class="item">
+      <div>Imagem da receita</div>
+      <div><input type="text" placeholder="oi"></div>
+    </div>
+  
+    <div class="item">
+      <div>Ingredientes</div>
+      <div><input type="text" placeholder="Ingrediente 1"></div>
+      <div><input type="text" placeholder="Ingrediente 2"></div>
+      <button>Adicionar novo ingrediente</button>
+    </div>
+
+    <div class="item">
+      <div>Modo de preparo</div>
+      <div><input type="text" placeholder="Passo 1"></div>
+      <div><input type="text" placeholder="Passo 12"></div>
+      <button>Adicionar novo passo</button>
+    </div>
+
+    <div class="item">
+      <div>Informações adicionais</div>
+      <div><textarea></textarea></div>
+    </div>
+
+  </div>
+
+  <script src="/hide.js"></script>
+  <script src="/scriptsAdmin.js"></script>
+
+  {% block footer %}
+  {% endblock %}
+
+{% endblock %}
