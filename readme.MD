@@ -9,3 +9,7 @@
 ## Nesse desafio você irá refatorar, ou seja, reescrever algumas partes, do seu código do desafio anterior, o Foodfy. Até esse módulo não conhecíamos sobre back-end, ou seja, todos dados da nossa página ficavam no próprio front-end (arquivos HTML). Agora que conhecemos sobre Node.js vamos tornar a exibição dos dados mais dinâmica 🚀
 
 ### Link para informações completas do desafio >> https://github.com/rocketseat-education/bootcamp-launchbase-desafios-03/blob/master/desafios/03-refatorando-foodfy.md
+
+## Nesse desafio você irá criar uma área administrativa para o Foodfy 🚀
+
+### Link para informações completas do desafio >> https://github.com/rocketseat-education/bootcamp-launchbase-desafios-04/blob/master/desafios/04-admin-foodfy.md
