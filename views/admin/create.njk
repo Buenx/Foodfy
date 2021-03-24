@@ -2,7 +2,7 @@
 
 {% block head %}
   <title>recipes</title>
-  <link rel="stylesheet" href="/edit.css">
+  <link rel="stylesheet" href="/styles/edit.css">
 {% endblock %}
 
 {% block header %}
@@ -18,39 +18,10 @@
       <button id="save-button" class="edit" type="submit">Salvar receita</button>
     </div>
 
-    <div class="item">
-      <div>Imagem da receita</div>
-      <div><input type="text" placeholder="oi" name="image"></div>
-    </div>
-  
-    <div class="item">
-      <div>Ingredientes</div>
-      <div id="ingredients">
-        <div class="ingredient">
-          <input type="text" name="ingredients[]" value="" placeholder="Adicione o ingrediente">
-        </div>
-      </div>
-      <button type="button" class="add-ingredient">Adicionar Ingredient</button>
-    </div>
-
-    <div class="item">
-      <div>Modo de preparo</div>
-      <div id="preparations">
-        <div class="preparation">
-          <input type="text" name="preparation[]" value="" placeholder="Adicione o passo">
-        </div>
-      </div>
-      <button type="button" class="add-preparation">Adicionar Preparation</button>
-    </div>
-
-    <div class="item">
-      <div>Informações adicionais</div>
-      <div><textarea name="information"></textarea></div>
-    </div>
-
+    {% include "admin/fields.njk" %}
   </form>
 
-  <script src="/ingredients.js"></script>
+  <script src="/scripts/ingredients.js"></script>
 
   {% block footer %}
   {% endblock %}

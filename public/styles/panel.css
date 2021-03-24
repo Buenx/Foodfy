@@ -25,6 +25,7 @@ header {
 
 .links-header img {
   margin-top: 25px;
+  cursor: pointer;
 }
 
 .title {
@@ -83,7 +84,7 @@ header {
   margin: 5px 0;
 }
 
-.card-info p:last-child {
+.card-info a {
   color: #6558c3;
   text-decoration: none;
   cursor: pointer;

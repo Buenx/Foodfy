@@ -2,7 +2,7 @@
 
 {% block head %}
   <title>recipes</title>
-  <link rel="stylesheet" href="/show.css">
+  <link rel="stylesheet" href="/styles/show.css">
 {% endblock %}
 
 
@@ -13,16 +13,16 @@
 {% block content %}
 
 <div class="title">
-  <p>Gerenciar receitas</p>
-  <div class="edit">Editar receita</div>
+  <p>Receita: {{recipes.title}}</p>
+  <a href="/admin/recipes/{{recipes.id}}/edit" class="edit">Editar receita</a>
 </div>
 
   <div class="card">
     <div class="card-image">
-      <img src="{{items.image}}" alt="">
+      <img src="{{recipes.image}}" alt="">
     </div>
-    <h1 class="food-name">{{items.title}}</h1>
-    <p class="chef-name">{{items.author}}</p>
+    <h1 class="food-name">{{recipes.title}}</h1>
+    <p class="chef-name">{{recipes.author}}</p>
   </div>
 
   <section class="recipes-info">
@@ -33,8 +33,8 @@
     </div>
 
     <div class="text" id="1">
-      {% for item in items.ingredients %}
-        <li>{{item}}</li>
+      {% for recipe in recipes.ingredients %}
+        <li>{{recipe}}</li>
       {% endfor %}
     </div>
 
@@ -44,8 +44,8 @@
     </div>
 
     <div class="text" id="2">
-      {% for item in items.preparation %}
-        <li>{{item}}</li>
+      {% for recipe in recipes.preparation %}
+        <li>{{recipe}}</li>
       {% endfor %}
     </div>
 
@@ -55,15 +55,12 @@
     </div>
 
     <div class="text" id="3">
-      <p>{{items.information}}</p>
+      <p>{{recipes.information}}</p>
     </div>
 
   </section>
 
-  <script src="/hide.js"></script>
-
-  <script src="/scriptsAdmin.js"></script>
-
+  <script src="/scripts/hide.js"></script>
   {% block footer %}
   {% endblock %}
 

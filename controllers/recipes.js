@@ -1,20 +1,29 @@
 const data = require('../data.json');
 
 exports.home = function (req, res) {
-  return res.render('home', { recipes: data.recipes });
+  return res.render('user/home', { recipes: data.recipes });
 };
 
 exports.recipesPage = function (req, res) {
-  return res.render('recipes', { recipes: data.recipes });
+  return res.render('user/recipes', { recipes: data.recipes });
 };
 
 exports.recipesIndex = function (req, res) {
-  const recipeIndex = req.params.index;
-  const recipe = data.recipes[recipeIndex];
+  const { id } = req.params;
 
-  return res.render('recipe', { items: recipe });
+  const foundRecipe = data.recipes.find(function (recipe) {
+    return recipe.id == id;
+  });
+
+  if (!foundRecipe) return res.send('Receita não encontrada');
+
+  const recipe = {
+    ...foundRecipe,
+  };
+
+  return res.render('user/recipe', { recipes: recipe });
 };
 
 exports.about = function (req, res) {
-  return res.render('about');
+  return res.render('user/about');
 };

@@ -24,6 +24,7 @@ header {
 
 .links-header img {
   margin-top: 25px;
+  cursor: pointer;
 }
 
 .title {
@@ -35,7 +36,7 @@ header {
   align-items: center;
 }
 
-.title div {
+.title a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,6 +48,7 @@ header {
   background-color: #6558c3;
   color: #ffffff;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .title p {

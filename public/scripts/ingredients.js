@@ -4,7 +4,7 @@ function addIngredient() {
   const fieldContainer = document.querySelectorAll('.ingredient');
 
   const newField = fieldContainer[fieldContainer.length - 1].cloneNode(true);
-  if (newField.children[0].value == '') return false;
+  if (newField.children[0].value == '') return alert('Preencha o campo anterior');
 
   newField.children[0].value = '';
   ingredients.appendChild(newField);
@@ -16,7 +16,7 @@ function addPreparation() {
   const fieldContainer = document.querySelectorAll('.preparation');
 
   const newField = fieldContainer[fieldContainer.length - 1].cloneNode(true);
-  if (newField.children[0].value == '') return false;
+  if (newField.children[0].value == '') return alert('Preencha o campo anterior');
 
   newField.children[0].value = '';
   preparations.appendChild(newField);

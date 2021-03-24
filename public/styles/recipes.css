@@ -25,6 +25,10 @@ header {
   font-size: 16px;
 }
 
+.links-header .active {
+  font-weight: bold;
+}
+
 #sobre {
   margin-right: 26px;
 }

@@ -2,7 +2,7 @@
 
 {% block head %}
   <title>recipes</title>
-  <link rel="stylesheet" href="/panel.css">
+  <link rel="stylesheet" href="/styles/panel.css">
 {% endblock %}
 
 {% block header %}
@@ -21,14 +21,13 @@
           <div class="card-info">
             <h1 class="food-name">{{recipe.title}}</h1>
             <p class="chef-name">{{recipe.author}}</p>
-            <p class="view">Visualizar</p>
+            <a href="/admin/recipes/{{recipe.id}}">Visualizar</a>
           </div>
         </div>
       {% endfor %}
     </section>
   </main>
 
-  <script src="/scriptsAdmin.js"></script>
 
   {% block footer %}
   {% endblock %}

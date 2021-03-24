@@ -4,7 +4,7 @@
   <head>
     {% block head %}
       <title>Foodfy</title>
-      <link rel="stylesheet" href="/styles.css">
+      <link rel="stylesheet" href="/styles/styles.css">
     {% endblock %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,9 +14,11 @@
     <header>
       <div class="links-header">
         {% block header %}
-        <img src="/assets/logo.png" onclick="location.href = '/';" id="logo" alt="">
-          <a href="/sobre" id="sobre">Sobre</a>
-          <a href="/receitas" id="Receitas">Receitas</a>
+        <div class="links">
+          <img src="/assets/logo.png" onclick="location.href = '/';" id="logo" alt="">
+          <a href="/about" id="sobre">Sobre</a>
+          <a href="/recipes" id="receitas">Receitas</a>
+        </div>
         {% endblock %}
       </div>
     </header>
@@ -30,6 +32,8 @@
         </div>
       </footer>
     {% endblock %}
+
+  <script src="/scripts/highlightHeader.js"></script>
 
   </body>
 </html>

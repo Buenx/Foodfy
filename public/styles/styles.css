@@ -27,6 +27,10 @@ header {
   font-size: 16px;
 }
 
+.links-header .active {
+  font-weight: bold;
+}
+
 #sobre {
   margin-right: 26px;
 }
@@ -47,7 +51,7 @@ header {
 .card-chef {
   border-radius: 30px;
   margin: 0 auto;
-  background-color: #FBDFDB;
+  background-color: #fbdfdb;
   width: 940px;
   height: 366px;
   position: relative;
@@ -156,7 +160,7 @@ footer p {
 }
 
 #tittle-1 {
-  font-size: 24px ;
+  font-size: 24px;
   margin-top: 10px;
 }
 

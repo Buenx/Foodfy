@@ -45,6 +45,8 @@ header {
   border-radius: 4px;
   color: #ffffff;
   cursor: pointer;
+  text-decoration: none;
+  font-size: 16px;
 }
 
 #save-button {
@@ -85,7 +87,7 @@ header {
 }
 
 .item div input,
-.item:last-child div textarea {
+.item div textarea {
   border: 1px solid #dddddd;
   background: #ffffff;
   width: 100%;
@@ -117,7 +119,7 @@ header {
   margin-bottom: 26px;
 }
 
-.item:last-child div textarea {
+.item div textarea {
   height: 250px;
   width: 100%;
   padding: 12px;
